@@ -67,7 +67,7 @@ brew install git
 
 echo "Git config"
 git config --global user.name "Andrew Wong"
-git config --global user.email thewongandrew@outlook.com
+git config --global user.email 24874635+thewongandrew@users.noreply.github.com
 
 echo "Installing other brew apps..."
 brew install ${brew_apps[@]}
