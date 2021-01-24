@@ -7,6 +7,7 @@ brew_apps=(
   htop
   jq        # JSON prettier for cli
   lsd 
+  neovim
   nmap
   node
   python3
@@ -34,7 +35,6 @@ cask_apps=(
   parallels
   postman
   private-internet-access
-  spark
   spotify
   iterm2
   vlc
@@ -75,8 +75,7 @@ brew install ${brew_apps[@]}
 # Install cask apps to /Applications
 # Default is: /Users/$user/Applications
 echo "installing apps with Cask..."
-brew cask install --appdir="/Applications" ${cask_apps[@]}
-brew cask alfred link
+brew install --cask --appdir="/Applications" ${cask_apps[@]}
 
 echo "Cleaning up brew"
 brew cleanup
@@ -97,12 +96,12 @@ echo "Installing Oh My ZSH..."
 curl -L http://install.ohmyz.sh | sh
 
 # echo "Setting up Oh My Zsh theme..."
-# cd  /Users/bradparbs/.oh-my-zsh/themes
-# curl https://gist.githubusercontent.com/bradp/a52fffd9cad1cd51edb7/raw/cb46de8e4c77beb7fad38c81dbddf531d9875c78/brad-muse.zsh-theme > brad-muse.zsh-theme
+cd  /Users/bradparbs/.oh-my-zsh/themes
+curl https://gist.githubusercontent.com/bradp/a52fffd9cad1cd51edb7/raw/cb46de8e4c77beb7fad38c81dbddf531d9875c78/brad-muse.zsh-theme > brad-muse.zsh-theme
 
 # echo "Setting up Zsh plugins..."
-# cd ~/.oh-my-zsh/custom/plugins
-# git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+cd ~/.oh-my-zsh/custom/plugins
+git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 
 echo "Setting some Mac settings..."
 
